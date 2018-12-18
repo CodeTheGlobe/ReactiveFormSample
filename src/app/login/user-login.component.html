@@ -1,0 +1,22 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" >
+<div>
+<input class="form-control" formControlName="fullName" type="text" placeholder="username" />
+<input class="form-control" formControlName="email" type="password" placeholder="password" />
+
+</div>
+<div formGroupName="skills">
+<input class="form-control" type="text" formControlName="skillName" placeholder="skill name" />
+<input class="form-control" type="text" formControlName="experienceInYears" placeholder="Experience In Years" /> <br/>
+<div>
+<label class="col-sm-1 control-label" for="one">Novice</label>
+<input class="col-sm-1 custom-control-input" id="one" type="radio" value="novice" formControlName="proficiency" />
+    
+<label class="col-sm-1 control-label" for="two">Beginner</label>
+<input class="col-sm-1 custom-control-input" id="two" type="radio" value="beginner" formControlName="proficiency" />
+    
+<label class="col-sm-1 control-label" for="three">Expert</label>
+<input class="col-sm-1 custom-control-input" id="three" type="radio" value="expert" formControlName="proficiency" />
+</div>
+</div><br /><br />
+<input class="btn btn-primary" type="submit" value="Submit" />
+</form>
